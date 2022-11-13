@@ -16,7 +16,7 @@ output: html_document
 
 We would like to determine whether the blood concentration in fat is related to the age of the subjects.
 
-(@) load the data (`csv`) available [here](data/blood_fat.csv) in R
+(@) load the data (`csv`) available in `data/blood_fat.csv` into your R session.
 
 ```{r}
 # Write your answer here
