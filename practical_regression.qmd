@@ -1,0 +1,156 @@
+---
+title: "My answers"
+author: "My name"
+date: "2022-11-11"
+output: html_document
+---
+
+
+
+
+# 1. Simple linear model
+
+> In order to tryout linear models in _R_ we are going to use the `blood_fat` dataset which contains the *age* (in years), *weight* (in kg) and  measured *fat concentrations* (units were not mentioned) in blood samples of different subjects.
+
+## Relation of blood fat content and age
+
+We would like to determine whether the blood concentration in fat is related to the age of the subjects.
+
+(@) load the data (`csv`) available [here](data/blood_fat.csv) in R
+
+```{r}
+# Write your answer here
+```
+
+
+
+### Visualization
+
+(@) If the goal would be to guess the fat concentration knowing someones age, find out which are the **response** and **predictor** variables and draw the according scatter plot.
+(@) Add a regression line (without the confidence interval ribbon).
+```{r}
+# Write your answer here
+```
+
+
+(@) Add a new column to the `blood_fat` data frame containing the expected fat levels from the linear model.
+    - For each subject in the data frame, add these predicted values as **red points** on your previous plot.
+    - Using `geom_segment()`, connect the expected values to the measured values as **dotted lines**.
+
+```{block, opts.label = "tip"}
+Remember to use the appropriate `broom` function after the linear model, to fetch all those information in one tibble
+```
+
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Calculate the **slope** and **intercept** of the regression line
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Draw a **dashed lightblue** line using **explicitly** the values you calculated in the previous question
+
+```{r}
+# Write your answer here
+```
+
+
+
+### Calculate $R^2$
+
+You learned that $R^2$ can be calculated as follows:
+
+  $$R^2 = 1- \frac{\sum(y_i - \hat{y_i})^2}{\sum(y_i - \bar{y})^2} = 1- \frac{RSS}{TSS}$$
+
+(@) The length of the dotted lines you just represented are related to a term of this equation. Which one?
+(@) Using `mutate()`, add the length of each dotted line to the `blood_fat` data frame.
+
+```{r}
+# Write your answer here
+```
+
+
+(@) What do these length represent? Which functions in _R_ generates these values?
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Calculate $RSS$, $TSS$ and $R^2$
+
+```{r}
+# Write your answer here
+```
+
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Is there really a relationship between blood fat content and age? What does the value of $R^2$ tell you?
+
+```{r}
+# Write your answer here
+```
+
+### Checking the residuals of the model
+
+(@) Residuals's mean
+    + What is the expectation for the residuals's mean?
+    + Compute the residuals's mean for the fat explained by age model.
+```{r}
+# Write your answer here
+```
+
+
+(@) Can the measures appropriately be modelled in this way? Draw two diagnosis plots using `ggplot2`
+    + In the first draw the residuals on the _y_ axis and the estimated values on the _x_ axis
+    + Your second one should be a quantile-quantile plot.
+
+
+```{block, opts.label = "tip"}
+The package `ggfortify` and the function `autoplot(fit)` can produce the classic 4 diagnostic plots with no efforts
+```
+
+```{r}
+# Write your answer here
+```
+
+
+### Relation of blood fat content and weight
+
+(@) Change predictor and use `weight` instead of `age` to predict the fat concentration
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Check the summary and diagnostic plots for this regression
+
+```{r}
+# Write your answer here
+```
+
+
+```{r}
+# Write your answer here
+```
+
+
+(@) Can the blood content in fat be explained by the weight of the subject?
+
+```{r}
+# Write your answer here
+```
+
+
+
