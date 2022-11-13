@@ -1,7 +1,6 @@
 # Statistics in R
 
-First practicals covering material from first stats lecture 
-as well as the regression.
+Second practicals covering material on regression.
 
 ### Setup
 `renv::activate()` is contained in `.Rprofile`. 
