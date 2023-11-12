@@ -1,14 +1,14 @@
 ---
 title: "My answers"
 author: "My name"
-date: "2022-11-14"
+date: "2023-11-13"
 output: html_document
 ---
 
 
 
 
-# 1. Simple linear model
+# Simple linear model
 
 > In order to tryout linear models in _R_ we are going to use the `blood_fat` dataset which contains the *age* (in years), *weight* (in kg) and  measured *fat concentrations* (units were not mentioned) in blood samples of different subjects.
 
@@ -24,7 +24,7 @@ We would like to determine whether the blood concentration in fat is related to 
 
 
 
-### Visualization
+## Visualization
 
 (@) If the goal would be to guess the fat concentration knowing someones age, find out which are the **response** and **predictor** variables and draw the according scatter plot.
 (@) Add a regression line (without the confidence interval ribbon).
@@ -62,7 +62,7 @@ Remember to use the appropriate `broom` function after the linear model, to fetc
 
 
 
-### Calculate $R^2$
+## Calculate $R^2$
 
 You learned that $R^2$ can be calculated as follows:
 
@@ -101,7 +101,7 @@ You learned that $R^2$ can be calculated as follows:
 # Write your answer here
 ```
 
-### Checking the residuals of the model
+## Checking the residuals of the model
 
 (@) Residuals's mean
     + What is the expectation for the residuals's mean?
@@ -125,7 +125,7 @@ The package `ggfortify` and the function `autoplot(fit)` can produce the classic
 ```
 
 
-### Relation of blood fat content and weight
+## Relation of blood fat content and weight
 
 (@) Change predictor and use `weight` instead of `age` to predict the fat concentration
 
@@ -141,15 +141,10 @@ The package `ggfortify` and the function `autoplot(fit)` can produce the classic
 ```
 
 
-```{r}
-# Write your answer here
-```
-
-
 (@) Can the blood content in fat be explained by the weight of the subject?
 
-```{r}
-# Write your answer here
+```
+Write the answer here as text.
 ```
 
 
